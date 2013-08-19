@@ -4,7 +4,7 @@ Package.describe({
 
 Package.on_use(function(api) {
   api.use(['deps', 'underscore', 'templating']);
-
+  api.export('CollectionFS');
   api.add_files([ 'myConsole.js' ], [ 'client', 'server' ]);
 
   api.add_files([

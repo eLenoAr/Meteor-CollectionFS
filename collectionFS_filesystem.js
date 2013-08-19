@@ -1,23 +1,3 @@
-// REMOVE: When engien branche is merged with master in Meteor v0.6.0 ?
-if (typeof Npm === 'undefined') {
-  // Polyfill for Npm
-  var path = __meteor_bootstrap__.require('path');
-  Npm = {
-    require: __meteor_bootstrap__.require,
-    bundleRoot: path.dirname(__meteor_bootstrap__.require.main.filename)
-  };
-} else {
-  // Cannot rely on __meteor_bootstrap__.require.main.filename so we try this:
-  if (! Npm.bundleRoot )
-    _.extend(Npm, {
-      bundleRoot: (__meteor_bootstrap__ && __meteor_bootstrap__.bundle.root)? __meteor_bootstrap__.bundle.root :
-              (process && process.mainModule && process.mainModule.filename)? path.join(process.mainModule.filename, '..') : ''
-    });
-}
-
-// Test if we have found a bundleRoot
-if (! Npm.bundleRoot)
-  throw new Error('Cannot find bundle root directory'); 
 
 /**** EO Npm polyfill extended bundleRoot ******/
 
