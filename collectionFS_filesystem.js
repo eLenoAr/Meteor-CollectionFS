@@ -1,6 +1,3 @@
-
-/**** EO Npm polyfill extended bundleRoot ******/
-
 // Init config flags
 __meteor_runtime_config__.FILEHANDLER_SUPPORTED = false;
 
