@@ -193,6 +193,7 @@ _.extend(_queueListener.prototype, {
 						return { 
 							serverFilename: path.join(self.serverPath, myFilename), 
 							fileData: { 
+								filename: myFilename,
 								url: myUrl,							 
 								extension: extension.toLowerCase()
 							} 
